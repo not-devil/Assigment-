@@ -1,0 +1,18 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+class student{
+private: int x;
+        public:
+        inline int depart(int a){
+            this->x=a;
+            return a;
+        }
+    friend int display(student s){
+            cout<<"Your department no. is: "<<s.x;
+        }   };
+int main(){
+    student s;
+    cout<<"Your department number is: "<<s.depart(7);
+    display(s);
+    return 0;       }

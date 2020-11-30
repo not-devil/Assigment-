@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+template <class s>
+s add(s a, s b)
+{
+  s c;
+  c = a + b;
+  return c;
+}
+ template <class s>
+s subtract(s a,s  b)
+{
+  s c;
+  c = a - b;
+  return c;
+}
+ template <class s>
+s multiply(s a, s b)
+{
+  s c;
+  c = a * b;
+  return c;
+}
+template <class s>
+s divide(s a, s b)
+{
+  s c;
+  c = a / b;
+  return c;
+}
+int main()
+{
+  cout<<add<int>(10,20)<<endl;
+  cout<<subtract<float>(5.4,2.3)<<endl;
+cout<<multiply<int>(4,5)<<endl;
+cout<<divide<int>(9,3)<<endl;
+return 0;
+}  

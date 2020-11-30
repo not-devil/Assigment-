@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+#define MAX 10
+using namespace std;
+class employee{
+    int num;
+    float sal;
+    float tax;
+    float da;
+    float net;
+    char name[20];
+    char sname[10];
+    float basic;
+    public:
+        void getdata(){
+            cout<<"Enter your number:"<<endl;
+            cin>>num;
+            cout<<"Enter your name:"<<endl;
+            cin>>name>>sname;
+            cout<<"Enter your basic:"<<endl;
+            cin>>basic;
+        }
+        void netsal(){
+            da=0.52*basic;
+            tax=0.30*(basic+da);
+            net=(basic+da)-tax;
+        }
+        void putdata(){
+            cout<<"Details of "<<name<<":"<<endl;
+            cout<<"Employee number:"<<num<<endl;
+            cout<<"Employee name:"<<name<<endl;
+            cout<<"Employee basic:"<<basic<<endl;
+            cout<<"Employee da:"<<da<<endl;
+            cout<<"Employee Income tax:"<<tax<<endl;
+            cout<<"Employee Net salary:"<<net<<endl;
+           }};
+int main(){
+    employee o;
+    o.getdata();
+    o.netsal();
+    o.putdata();
+    return 0;
+}
