@@ -1,0 +1,116 @@
+//////////////////////
+Q:1 In a database there are two tables:
+//////////////////////
+
+(i)  this queries  
+ SELECT item.item_code , item.item_name  , brand.Brand_name FROM brand , item  WHERE item.Price BETWEEN 20000 AND 40000 AND brand.item_code = item.item_code; 
+  
+  Only Washing machine will show (Put img )
+
+(ii) 
+SELECT item.item_code, brand.Brand_name, item.Price FROM `item`  , `brand` WHERE item.item_name = 'computer' AND  item.item_code = brand.item_code
+
+(iii) UPDATE item.Price SET item.Price= item.Price + (item.Price * 10 / 100) ;
+
+//////////////////////
+Q:2  A table “Transport” in a database has degree 3 and cardinali ty 8. What is the number of rows and
+columns in it ?
+//////////////////////
+
+
+//////////////////////
+Q:3 Table Employee has 4 records and Table Dept has 3 records in it. Mr. Jain wants to display all
+information stored in both of these related tables. He forgot to specify equi -join condition in
+the query. How many rows will get displayed on execution of this query ?
+//////////////////////
+
+
+
+
+//////////////////////
+Q:4   In a database there are two tables “ITEM” and “CUSTOMER” as shown below
+//////////////////////
+
+(i). To display the details of Item, whose price is in the range of 40 and 95 (Both values included).
+
+  SELECT item.ItemName , item.Compney , item.ID ,item.price , customer.C_ID ,  customer.CustomerName ,customer.City FROM `customer` , `item` WHERE item.price BETWEEN 40  AND 95 AND customer.ID = item.ID
+
+(ii). To display the customername, city from table customer and ItemName and Price from table
+Item with their corresponding matching ID.
+
+SELECT customer.CustomerName , customer.City , item.ItemName , item.price FROM customer , item WHERE item.ID = customer.ID 
+
+
+(iii)  To increase the price of all the Products by 50.
+
+UPDATE `item` SET `price`= price + 50
+
+//////////////////////
+
+//////////////////////
+
+//////////////////////
+Q: A table FLIGHT has 4 rows and 2 columns and another table AIR hostess has 3 rows and 4
+columns. How many rows and columns will be there if we obtain the Cartesian product of these
+two tables ?
+//////////////////////
+
+FLIGHT has 4 rows and 2 columns
+AIR hostess has 3 rows and 4 columns
+
+cartiation mean A X B == so the A = 2
+And B= 4 
+ 
+ 4  X 3 =12
+
+ 
+
+//////////////////////
+Q: Given below is the Table Patient.
+(i) Identify Primary Key in the table given above.
+(ii) Write MySql query to add a column Department with data type varchar and size 30 in the table patient.
+//////////////////////
+(i) P_No is the primeary key because it not repeate and Doc_name is repeat 
+
+(ii) Write MySql query to add a column Department with data type varchar and size 30 in the
+table patient.
+
+
+
+
+
+
+
+/////////////////////////////////
+Q: Consider the tables HANDSETS and CUSTOMER given below:
+/////////////////////////////////
+(i) Display the CustNo, CustAddress and Corresponding SetName for each customer.
+
+
+
+(ii) Display the Cusomer Details for each customer who uses a Nokia handset.
+
+
+
+
+(iii) Select Setno, SetName From Handsets, Customer Where setno =setcode AND custAddress = ‘Delhi’;
+
+
+//////////////////////
+Q: Write MySql command to create the Table Product including its Constraints.
+//////////////////////
+
+CREATE TABLE `msqlassigmenet`.`product` ( `P_ID` DECIMAL(4) NOT NULL ,  `P_Name` VARCHAR(20) NOT NULL ,  `P_Company` VARCHAR(20) NOT NULL ,  `price` DECIMAL(8) NULL ,    PRIMARY KEY  (`P_ID`)) ENGINE = InnoDB;
+
+//////////////////////
+Q: Write a MySQL command for creating a table ‘PAYMENT’ whose structure is given below
+//////////////////////
+
+CREATE TABLE `msqlassigmenet`.`payment` ( `Loan_number` INT(4) NOT NULL ,  `Payment_number` VARCHAR(3) NOT NULL ,  `Payment_date` DATE NOT NULL ,  `Payment_amount` INT(8) NOT NULL ,    PRIMARY KEY  (`Loan_number`)) ENGINE = InnoDB
+
+
+///////////////////
+Q: Write SQL command to create the Table Vehicle with given constraint
+////////////////////////
+
+CREATE TABLE `msqlassigmenet`.`challan` ( `Challan_no` DECIMAL(10) NOT NULL ,  `ch_Date` DATE NOT NULL ,  `RegNo` CHAR(10) NOT NULL ,  `offence` DECIMAL(3) NOT NULL ,    PRIMARY KEY  (`Challan_no`)) ENGINE = InnoDB;
